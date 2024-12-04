@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>REGISTRATION FORM</title>
+</head>
+<body>
+    <h1>REGISTRATION FORM:</h1>
+    <form action="">
+        <p> 
+        <b>First Name:</b>
+        <input type="text" name="First Name" size="30" maxlength="30" placeholder="Enter Your First Name"> <br><br>
+        <b>Last Name:</b>
+        <input type="text" name="Last Name" size="30" maxlength="30" placeholder="Enter Your Last Name"> <br><br>
+        <b>password:</b>
+        <input type="password" name="password" size="30" maxlength="30" placeholder="Enter Your Password"> <br><br>
+        <b>What Did You Think About This Academy:</b> <br>
+        <textarea name="Comment"  cols="50" rows="10" placeholder="Enter Your Comments..."></textarea> <br><br>
+        <fieldset> 
+            <legend><b>Gender:</b></legend> 
+            <input type="radio" name="gender" value="male">Male <br>
+            <input type="radio" name="gender" value="female">Female <br>
+            <input type="radio" name="gender" value="other">Other <br>
+            </fieldset> <br>
+        <fieldset>
+            <legend><b>Interests:</b></legend>
+            <input type="checkbox" name="interests" value="music">Music <br>
+            <input type="checkbox" name="interests" value="sports">Sports <br>
+            <input type="checkbox" name="interests" value="reading">Reading <br>
+        </fieldset> <br>
+        <b>Country</b> <br>
+        <select name="country" size="1">
+            <option value="pakistan">Pakistan</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="dubai">Dubai</option>
+            <option value="srilanka">Srilanka</option>
+        </select> <br><br>
+        <b>prefered colour</b> <br>
+        <select name="colour" size="1">
+           <option value="red">Red</option> 
+           <option value="yellow">Yellow</option>
+           <option value="green" seleced="selected">Green</option>
+           <option value="blue">Blue</option>
+           <option value="orange">Orange</option>
+        </select><br><br>
+        <b>Profile Picture:</b><br>
+        <input type="file" name="picture"> <br><br>
+        <label for="username"><b>Birthdate:</b><br>
+        <input type="date" name="dob">
+        </label><br><br>
+        <b>Email:</b><br>
+        <input type="email" name="email" placeholder="Enter Your Email Address"> <br><br>
+        <b>Website:</b><br>
+        <input type="url" name="website" placeholder="Enter Your Website Address"> <br><br>
+        <b>Search:</b><br>
+        <input type="search" name="search" placeholder="Search What You Want">
+        <input type="submit" value="Search"><br><br>
+        <input type="submit" name="submit" value="Submit">
+        </p>
+    </form>
+    <script src="firebase.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
