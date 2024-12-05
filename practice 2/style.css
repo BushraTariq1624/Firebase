@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url("images/background.jpg");
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.margin{
+    position: absolute;
+    right: 0px;
+}
+.cards{
+    transform: translate(70%,20%);
+    border-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.color{
+    background-color: black;
+    background-size: cover;
+    color: white;
+}
+.logo{
+    border-radius: 20px;
+}

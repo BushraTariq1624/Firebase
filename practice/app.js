@@ -1,15 +1,15 @@
-import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "./firebase.js"
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "./firebase.js"
 
 const loginText = document.querySelector(".title-text .login");
 const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
 const signupBtn = document.querySelector("label.signup");
 const signupLink = document.querySelector("form .signup-link a");
-signupBtn.addEventListener("click ",() => {
+signupBtn.addEventListener("click ", () => {
     loginForm.style.marginLeft = "-50%";
     loginText.style.marginLeft = "-50%";
 });
-loginBtn.addEventListener("click",() => {
+loginBtn.addEventListener("click", () => {
     loginForm.style.marginLeft = "0%";
     loginText.style.marginLeft = "0%";
 });
@@ -60,5 +60,16 @@ let signIn = () => {
 
         });
 }
-let login= document.getElementById("login_button")
+let login = document.getElementById("login_button")
 login.addEventListener("click", signIn)
+
+let sendMail= () => {
+    const auth = getAuth();
+    sendEmailVerification(auth.currentUser)
+        .then(() => {
+            alert("email verification sent!")
+        });
+
+}
+let verification = document.getElementById("email_verification")
+verification.addEventListener("click",sendMail)
